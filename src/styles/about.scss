@@ -1,0 +1,34 @@
+@import "./colors";
+@import "./home.scss";
+
+.about-page {
+  @extend .hero-section;
+  width: 60%;
+  margin: 0 auto;
+  > h2 {
+    font-size: 38px;
+    span {
+      color: $c;
+    }
+  }
+  > h3 {
+    font-size: 24px;
+    span {
+      color: $c;
+    }
+  }
+  p {
+    font-size: 18px;
+    span {
+      font-weight: bold;
+      color: $c;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-page {
+    width: 90%;
+    text-align: center;
+  }
+}

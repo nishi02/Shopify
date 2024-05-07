@@ -1,0 +1,8 @@
+@import "./colors";
+@import "./login.scss";
+
+.register-page {
+  @extend .login-page;
+  padding: 60px 0;
+  padding-top: 70px;
+}

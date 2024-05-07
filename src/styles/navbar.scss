@@ -1,0 +1,111 @@
+@import "./colors";
+
+.nav-bar-component {
+  z-index: 9999;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: $c1;
+  box-shadow: 15px -17px 9px 11px black;
+
+  .menu-bar-btn {
+    font-size: 20px;
+    transition: color 0.6s ease-in-out;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: $c;
+    }
+  }
+
+  > .web-name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      font-weight: bold;
+    }
+    > img {
+      width: 30px;
+    }
+  }
+
+  > .links {
+    background-color: $c1;
+
+    .close-bar-btn {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    transition: width 0.7s ease-in-out;
+
+    > a {
+      display: block;
+      padding: 0 10px;
+      border-right: solid 1px $main;
+      cursor: pointer;
+      white-space: nowrap;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+    > .btns {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      > button {
+        white-space: nowrap;
+      }
+    }
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-bar-component {
+    > .links {
+      > .close-bar-btn {
+        display: block;
+      }
+      // display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+      width: 0;
+      right: -100px;
+      flex-direction: column;
+      background-color: $c1;
+      align-items: center;
+      justify-content: center;
+      > a {
+        border-right: none;
+      }
+    }
+    .btns {
+      flex-direction: column;
+    }
+    > .links.open {
+      width: 80%;
+      right: 0;
+    }
+    > .menu-bar-btn {
+      display: block;
+    }
+  }
+}

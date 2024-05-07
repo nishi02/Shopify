@@ -1,0 +1,42 @@
+@import "./colors";
+
+.footer {
+  background-color: $c;
+  color: $main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px;
+  padding-bottom: 0;
+  a {
+    &:hover {
+      color: $c1;
+    }
+  }
+  .fp1 {
+    img {
+      width: 50px;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+  > div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

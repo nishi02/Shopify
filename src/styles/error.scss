@@ -1,0 +1,35 @@
+@import "./colors";
+
+.errorpage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  gap: 10px;
+  img {
+    width: 200px;
+  }
+  p {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  a {
+    color: $c;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .errorpage {
+    width: 80%;
+    img {
+      width: 150px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}

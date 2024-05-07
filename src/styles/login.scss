@@ -1,0 +1,71 @@
+@import "./colors";
+
+@mixin formDiv() {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  label {
+    font-weight: bold;
+    color: $c;
+  }
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    border: solid 1px $main;
+  }
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  min-height: 100vh;
+  margin: 0 auto;
+  h2 {
+    font-size: 38px;
+    span {
+      color: $c;
+    }
+  }
+  > div {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    > div {
+      @include formDiv();
+    }
+    p {
+      font-size: 14px;
+      a {
+        font-weight: bold;
+        color: $c;
+      }
+    }
+    button {
+      padding: 5px 25px;
+      max-width: max-content;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login-page {
+    width: 90%;
+    h2 {
+      text-align: center;
+      font-size: 24px;
+    }
+    > div {
+      width: 90%;
+    }
+  }
+}

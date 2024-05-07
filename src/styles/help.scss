@@ -1,0 +1,32 @@
+@import "./colors";
+@import "./home.scss";
+
+.help {
+  @extend .hero-section;
+  > h2 {
+    font-size: 32px;
+    span {
+      color: $c;
+    }
+  }
+  > p {
+    font-weight: bold;
+    span {
+      color: $c;
+    }
+  }
+  > ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    > li {
+      font-size: 18px;
+      span {
+        color: $c;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+:root {
+  --main: #000000;
+  --mainl: #000000;
+  --c1: #ffffff;
+  --c2: #f4ebe8;
+  --c: #a20021;
+}
+
+.shpCartBtns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 300px;
+}

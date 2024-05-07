@@ -1,0 +1,59 @@
+.shpTab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding-top: 60px;
+  margin: 0 auto;
+  color: var(--main);
+}
+
+.shpTab p {
+  padding: 10px 35px;
+  opacity: 0.7;
+  transition: opacity 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.shpTab p.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.shpTab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shpTabItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.shpTabItem::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--c);
+  transition: width 0.7s ease;
+}
+
+.shpTabItem.active::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .shpTab {
+    width: 60%;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .shpTab > p {
+    font-size: 14px;
+  }
+}
